@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contact</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+    
+    
+    <script>
+
+function isNumeric(elementValue){
+var numberPattern=/^[0-9]+$/;
+return numberPattern.test(elementValue)
+}
+
+
+
+
+        
+        
+        
+        
+        
+
+function validateForm() {
+    
+        
+ 
+    
+    
+    
+    
+  var name_val = document.forms["myForm"]["name"].value;
+  if (name_val == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  
+  if (name_val.length>25)
+{
+alert("Max Character length is 25.");
+ return false;
+}
+
+     var address_val = document.forms["myForm"]["address"].value; 
+     if (address_val == "") {
+    alert("Please Enter your Address");
+    return false;
+    
+     }
+    
+   var mobile_val = document.forms["myForm"]["mobile"].value;
+  if (mobile_val == "") {
+    alert("Mobile must be filled out");
+    return false;
+  }
+ 
+    
+    
+        
+if (mobile_val.indexOf("083") && mobile_val.indexOf("085") && mobile_val.indexOf("086") && mobile_val.indexOf("087") && mobile_val.indexOf("089")){
+alert("Mobile Number Can Only Start With [083] [085] [086] [087] [089]");
+    return false;
+}  
+    
+
+    
+ 
+    
+    
+    
+  if (mobile_val.length>10)
+{
+alert("Max Character length is 10.");
+ return false;
+}
+ 
+     if (mobile_val.length<10)
+{
+alert("Mobile Number Incorrect");
+ return false;
+}
+    
+ if(mobile_val < 1 || mobile_val > 899999999){
+			alert("Out of the range.");
+			return false;
+		}
+		
+ 
+ 
+ if(!isNumeric(mobile_val))
+	{
+alert("Invalid mobile number Please Enter Integers Only ");
+        return false;
+	}	
+
+    
+    
+
+var email1_val = document.forms["myForm"]["email1"].value;
+  if (email1_val == "") {
+    alert("Email Is a Required Field");
+    return false;
+  }
+
+var email2_val = document.forms["myForm"]["email2"].value;
+   if (email2_val == "") {
+    alert("Please Retype Your Email");
+    return false;
+  }  
+    
+if(email1_val!=email2_val){  
+    alert("Emails Dont Match");
+    return false;
+}
+
+
+    
+      var member_val = document.forms["myForm"]["member"].value;
+   if (member_val == "") {
+    alert("Please Select either Member or non-member");
+    return false;
+  }   
+    
+      var query_val = document.forms["myForm"]["query"].value; 
+    if (query_val == "") {
+    alert("Please Enter your Enquiry");
+    return false;
+     }
+    
+    
+}
+	
+	
+	</script>
+    
+    
+    
+    
+    
+    
+</head>
+
+<body>
+
+<header>
+		<div class="row">
+			<div class="col"> <a href="index.html"><img class="style-logo" src="images/cahirparclAFC.png" alt="Logo"></a>
+				
+				
+				
+				<div class="topnav" id="myTopnav">
+ 				 <a href="index.html" >Home</a>
+ 				 <a href="History.html">History</a>
+                 <a href="Events.html">Events</a>
+                 <a href="results.html">Results</a>
+                 <a href="Gallary.html">Gallary</a>
+ 				 <a href="contact.html" class="active">Contact Us</a>
+				  <a href="usefulLinks.html">Useful Links</a>
+				  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+ 			   <i class="fa fa-bars"></i>
+ 			 </a>
+			</div>
+			</div>
+		</div>
+	</header>
+    
+    
+    
+    
+
+    
+    
+    
+<main>
+
+
+<div>
+				<form name="myForm" action="http://litstudentprojects.net/rwd-a2-response.php" method="post" onSubmit="return validateForm();">
+
+		<fieldset>
+		  <p><h1>Contact us</h1></p>
+		  <p><label for="name">Name:*</label>
+	      <input type="text" id="name" name="name" placeholder="Your name.."></p>
+
+			<p><label for="address">Address*: </label>		
+			<textarea type="text" cols="45" rows="5" id="address" name="address" placeholder="Your Address.."></textarea></p>
+					
+					<p><label for="mobile">Telephone:*</label>
+					<input type="text"  name="mobile"  id="mobile" placeholder="Your Telephone Number.."></p>
+					
+						<p><label for="email1">Email:*</label>
+						<input type="text" name="email1" id="email1" placeholder="Your E-mail.."> </p>	
+						
+						<p><label for="email2">Retype your Email:*</label>
+						<input type="text" name="email2" id="email2" placeholder="Retype E-mail.."></p>
+					
+				
+
+<p class="member1">
+<label>Are you:* </label>
+
+   <div><label for="member"><input type="radio" name="member"
+  value="yes" id="member"> Member</label></div>
+  
+
+  
+<div><label for="non-member"><input type="radio" name="member"
+  value="no" id="non-member"> Non-Member</label></div>    
+<br>
+
+
+ </p>
+		
+<br>
+<br>
+<br>
+    
+    
+    
+
+		
+						<p><label for="query">Query:*</label>
+							<textarea type="text" cols="45" rows="5"  name="query"  id="query" placeholder="What would you like to ask about.."></textarea></p>
+		
+		
+		
+		
+<div id="submit">
+		<p><input type="submit" value="Submit" class="contactBtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset" class="contactBtn"></p>
+        <p>* Required Field</p>
+</div>
+		
+
+</fieldset>
+</form>
+</div>
+</main>
+
+	
+    
+
+    
+    
+	<footer>
+		<div class="row">
+			<div class="col">
+				
+                
+               <div class="footerDiv">
+				<h3>Club Contact</h3>
+				<p>
+                <ul>
+                <ul>All-Weather Pitch:  052 7443850 </ul>
+                <br>
+                <hr>
+                <br>
+                <ul>Cahir AFC Clubhouse  052 7443850 </ul>
+                <br>
+                <hr>
+                <br>
+               	<ul><a href="mailto:cahirparkafc@hotmail.com" class="mail">cahirparkafc@hotmail.com</a></ul>
+
+                
+                
+                </ul>
+                </p>
+				</div>
+				
+				
+				<div class="footerDiv">
+				<h3>Find Us</h3>
+                
+<div class="map-responsive">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9741.894659589716!2d-7.9251881064676235!3d52.37996317660536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x484335f52382eb61%3A0x8760993c3c179c91!2sCahir+Park+AFC!5e0!3m2!1sen!2sie!4v1553370284925" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+
+				</div>
+				
+				
+				<div class="footerDiv">
+				<h3>Follow Us</h3>
+				<a href="https://twitter.com/cahirparkafc?lang=en" target="_blank"><img src="images/iconfinder_Social-media_Twitter_4362955.png" alt="twitterimage" id="twitter" class="social"></a>
+				<a href="https://www.facebook.com/CahirParkAfc/" target="_blank"><img src="images/iconfinder_Social-media_Facebook_4362964.png" alt="facebookimage" id="facebook" class="social"></a>
+				<a href="https://www.oneills.com/shop-by-team/soccer/soccer-clubs/cahir-park-afc.html" target="_blank"><img src="images/nxvFm3J9_400x400.jpg" alt="oniels" id="oniels" class="social"></a>
+				</div>
+ 
+                
+                
+                
+                
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
